@@ -1,0 +1,27 @@
+
+
+Python 37 Windows Download
+https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe
+
+c:\python37
+
+
+Python 37 Download Page for Other OS
+https://www.python.org/downloads/release/python-373/
+
+
+Python 27 Windows Download
+https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64.msi
+
+c:\python27
+
+Python 27 Download Page For Other OS
+https://www.python.org/downloads/release/python-2715/
+
+
+
+https://code.visualstudio.com/
+
+Extensions: 
+CodeRunner [JunHan]
+Python [Microsoft]

@@ -1,0 +1,20 @@
+
+
+1. Start A command window 
+
+2. Try commmand :   python --version
+
+
+
+3. Try command  :   where python
+    * Note which versions of pythons are installed and where.
+
+4. We need both python 2 and python 3. Install the Missing version from links.txt
+
+5. Install VS Code from links.txt
+
+
+
+
+
+
