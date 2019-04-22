@@ -8,6 +8,7 @@ c:\python37
 
 Python 37 Download Page for Other OS
 https://www.python.org/downloads/release/python-373/
+c:\python37
 
 
 Python 27 Windows Download
