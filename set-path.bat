@@ -1,1 +1,1 @@
-@setx path "c:\python37;c:\python27;c:\python37\scripts;%path%"
+@setx /M path "c:\python37;c:\python27;c:\python37\scripts;%path%"

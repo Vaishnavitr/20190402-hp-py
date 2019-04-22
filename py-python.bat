@@ -1,1 +1,1 @@
-@setx PY_PYTHON 2.7
+@setx /M PY_PYTHON 2.7
