@@ -13153,6 +13153,781 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Solution---prime_count---v1">Solution - prime_count - v1<a class="anchor-link" href="#Solution---prime_count---v1">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prime_count</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">):</span>
+    <span class="n">primes</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="nb">min</span>
+    <span class="k">while</span> <span class="n">number</span><span class="o">&lt;</span><span class="nb">max</span><span class="p">:</span>
+        <span class="n">test</span><span class="o">=</span><span class="mi">2</span>
+        <span class="k">while</span> <span class="n">test</span><span class="o">&lt;</span><span class="n">number</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="k">test</span>==0:
+                <span class="k">break</span>
+            <span class="n">test</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#number is prime</span>
+            <span class="n">primes</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+            
+            
+            
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Total primes between </span><span class="si">{min}</span><span class="s1">-</span><span class="si">{max}</span><span class="s1"> is </span><span class="si">{primes}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_count</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total primes between 2-10 is 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_count</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total primes between 50-100 is 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_count</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total primes between 2-100 is 25
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Solution---prime_n---v1">Solution - prime_n - v1<a class="anchor-link" href="#Solution---prime_n---v1">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prime_n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="mi">2</span>
+    <span class="k">while</span> <span class="n">count</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+        <span class="n">test</span><span class="o">=</span><span class="mi">2</span>
+        
+        <span class="k">while</span> <span class="n">test</span><span class="o">&lt;</span><span class="n">number</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="k">test</span>==0:
+                <span class="k">break</span>
+            <span class="n">test</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prime</span><span class="o">=</span><span class="n">number</span>
+            <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+            
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;the prime at index </span><span class="si">{n}</span><span class="s1"> is </span><span class="si">{prime}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_n</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>the prime at index 1 is 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_n</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>the prime at index 4 is 7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_n</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>the prime at index 25 is 97
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prime_n</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>the prime at index 26 is 101
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Compare-the-Two-functions">Compare the Two functions<a class="anchor-link" href="#Compare-the-Two-functions">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prime_count</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">):</span>
+    <span class="n">primes</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="nb">min</span>
+    <span class="k">while</span> <span class="n">number</span><span class="o">&lt;</span><span class="nb">max</span><span class="p">:</span>
+        <span class="n">test</span><span class="o">=</span><span class="mi">2</span>
+        <span class="k">while</span> <span class="n">test</span><span class="o">&lt;</span><span class="n">number</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="k">test</span>==0:
+                <span class="k">break</span>
+            <span class="n">test</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">primes</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Total primes between </span><span class="si">{min}</span><span class="s1">-</span><span class="si">{max}</span><span class="s1"> is </span><span class="si">{primes}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">prime_n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="mi">2</span>
+    <span class="k">while</span> <span class="n">count</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+        <span class="n">test</span><span class="o">=</span><span class="mi">2</span>
+        <span class="k">while</span> <span class="n">test</span><span class="o">&lt;</span><span class="n">number</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="k">test</span>==0:
+                <span class="k">break</span>
+            <span class="n">test</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prime</span><span class="o">=</span><span class="n">number</span>
+            <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;the prime at index </span><span class="si">{n}</span><span class="s1"> is </span><span class="si">{prime}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Single-Responsibility-Principle">Single Responsibility Principle<a class="anchor-link" href="#Single-Responsibility-Principle">&#182;</a></h2><ul>
+<li><p>Ever component (function, objects etc) in you system should have a <strong>single responsibility</strong></p>
+<ul>
+<li>one reason to exist</li>
+<li>one reason to change</li>
+</ul>
+</li>
+<li><p>No one should do anything that is not its explicit responsibility</p>
+</li>
+<li><p>try to break a responsibiliy into</p>
+<ul>
+<li>sub responsibilty</li>
+<li>let the responsibility be fulfilled by several smaller components together</li>
+</ul>
+</li>
+</ul>
+<h3 id="common-symptoms-indicating-violation">common symptoms indicating violation<a class="anchor-link" href="#common-symptoms-indicating-violation">&#182;</a></h3><ul>
+<li><p>Redudant code</p>
+<ul>
+<li>most often violates SRP</li>
+<li>may not be visible immediately</li>
+</ul>
+</li>
+<li><p>next loops or complex code</p>
+<ul>
+<li>often is an indicator of violating SRP</li>
+<li>may not be violating SRP<ul>
+<li>should be carefully studied</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>unwanted i/o (print/input) in a business logic use case</p>
+</li>
+<li><p>multiple tasks</p>
+</li>
+</ul>
+<h3 id="prime_count">prime_count<a class="anchor-link" href="#prime_count">&#182;</a></h3><ul>
+<li>Our prime count violates SRP</li>
+<li><p>It is having 3 responsibilities</p>
+<ol>
+<li><p>count matching values</p>
+<ul>
+<li>matching values in another case may be</li>
+</ul>
+</li>
+<li><p>check if a given value is prime</p>
+<ul>
+<li>can be used for<ul>
+<li>finding nth prime</li>
+<li>finding if one number is prime</li>
+<li>finding sum of n primes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>print the result<ul>
+<li>don't do anything not explicitly asked</li>
+<li>the function was supposed to count (and return) not print the result</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="Divide-your-design-in-Singly-Responsible-Units">Divide your design in Singly Responsible Units<a class="anchor-link" href="#Divide-your-design-in-Singly-Responsible-Units">&#182;</a></h3><h3 id="1.-is_prime">1. is_prime<a class="anchor-link" href="#1.-is_prime">&#182;</a></h3>
+<pre><code>* check if a number is prime or not
+* can be used for
+    * checking a single value
+    * finding nth value
+    * summing a range
+    * etc
+
+</code></pre>
+<h3 id="2.-count_range">2. count_range<a class="anchor-link" href="#2.-count_range">&#182;</a></h3><ul>
+<li>can count matching value in a range</li>
+<li>matching values may be<ul>
+<li>count evens</li>
+<li>counts factors of 8</li>
+<li>count multiple of 8 or 12</li>
+</ul>
+</li>
+</ul>
+<h3 id="3.-return-a-value-and-let-client-decide-what-they-want-to-print">3. return a value and let client decide what they want to print<a class="anchor-link" href="#3.-return-a-value-and-let-client-decide-what-they-want-to-print">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">test</span><span class="o">=</span><span class="mi">2</span>
+    <span class="k">while</span> <span class="n">test</span><span class="o">&lt;</span><span class="n">number</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="k">test</span>==0:
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">test</span><span class="o">+=</span><span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">count_primes</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">):</span>
+    <span class="n">primes</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="nb">min</span>
+    <span class="k">while</span> <span class="n">number</span><span class="o">&lt;</span><span class="nb">max</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">primes</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">primes</span>
+
+
+<span class="k">def</span> <span class="nf">prime_n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="mi">2</span>
+    <span class="k">while</span> <span class="n">count</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">prime</span><span class="o">=</span><span class="n">number</span>
+            <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">prime</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>25</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Assignment-3---min-should-default-to-0">Assignment 3 - min should default to 0<a class="anchor-link" href="#Assignment-3---min-should-default-to-0">&#182;</a></h3><h4 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h4><ul>
+<li>python requirest default parameters from the right side</li>
+<li>if min needs a default<ol>
+<li>either min should be the last parameter ---&gt; <strong>Not as per requirement</strong></li>
+<li>max should also have a default  ----&gt; <strong>Not as per requirement</strong></li>
+</ol>
+</li>
+</ul>
+<h4 id="solution">solution<a class="anchor-link" href="#solution">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">count_primes</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">max</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nb">min</span>
+        
+    <span class="n">primes</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="nb">min</span>
+    <span class="k">while</span> <span class="n">number</span><span class="o">&lt;</span><span class="nb">max</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">primes</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">primes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>25</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="challenge---0-is-a-valid-argument-value">challenge - 0 is a valid argument value<a class="anchor-link" href="#challenge---0-is-a-valid-argument-value">&#182;</a></h4><ul>
+<li>it may cause a problem</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">count_primes</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">max</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="nb">min</span>
+        
+    <span class="n">primes</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">number</span><span class="o">=</span><span class="nb">min</span>
+    <span class="k">while</span> <span class="n">number</span><span class="o">&lt;</span><span class="nb">max</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">primes</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">primes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_primes</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>15</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
