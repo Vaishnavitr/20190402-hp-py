@@ -38,4 +38,4 @@ def read_bool(prompt,default=None,suffix=':'):
     return s in trues
 
 
-print('loading module {}'.format(__name__))
+

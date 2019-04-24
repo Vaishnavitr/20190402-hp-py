@@ -8,19 +8,18 @@ Write a program to
 
 '''
 
-from maths import *
-from primes import prime_range
-import consoleutils as cu
+import ca.calculations.maths as maths
+from ca.calculations.primes import prime_range
+import ca.utils.console as cu
 
 def main():
     run=True
-    print('welcome to prime app {}'.format(__name__))
     while run:
         min=cu.read_int('min',2)
         max=cu.read_int('max',100)
         primes=prime_range(min,max)
-        tot=sum(*primes)
-        avg=average(*primes)
+        tot=maths.sum(*primes)
+        avg=maths.average(*primes)
         
 
         print('primes is range {}-{} are {}'.format(min,max,primes))
