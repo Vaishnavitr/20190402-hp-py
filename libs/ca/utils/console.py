@@ -1,3 +1,10 @@
+import sys
+
+if sys.version_info.major<3:
+    input=raw_input
+
+
+
 
 
 def read_string(prompt, default=None,suffix=':'):

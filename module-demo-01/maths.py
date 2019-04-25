@@ -9,10 +9,12 @@ def sum(*args):
 
 
 def average(*args):
+    print('ca average called with {}'.format(args))
     return sum(*args)/len(args)
 
 
 if __name__=='__main__':
+    
     print('testing maths module {}'.format(__name__))
     print('sum(1,2,3,4)=>{}'.format(sum(1,2,3,4)))
     print('average(1,2,3,4)=>{}'.format(average(1,2,3,4)))
